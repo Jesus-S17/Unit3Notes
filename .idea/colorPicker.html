@@ -3,15 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <style>
+        .red{
+            background-color: red;
+        }
+        .green{
+            background-color: green;
+        }
+        .blue{
+            background-color: blue;
+        }
+        .pink{
+            color:pink;
+        }
+        .teal{
+            color:teal;
+        }
+        .purple{
+            color:puple;
+        }
+    </style>
 </head>
 <body>
 <div class="container">
     <div class="content">
-        <p>Placerholder text</p>
+        <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+            magna aliqua. Tristique risus nec feugiat in fermentum posuere urna. Nibh praesent tristique magna sit amet
+            purus gravida quis. Felis eget velit aliquet sagittis. Mauris sit amet massa vitae tortor condimentum. Ipsum
+            quan adipiscing. Sed libero enim sed faucibus turpis in ev. Faucibus vitae aliquet nec ullamcorper sit.</p>
         <div class="row">
             <h3>Background</h3>
             <button id="1">RED</button>
-            <button id="2">GREEN</button>
+            <button id="2" >GREEN</button>
             <button id="3">BLUE</button>
         </div>
         <div class="row">
@@ -23,5 +46,64 @@
         <button id="clear">CLEAR</button>
     </div>
 </div>
+<script>
+    const content = document.querySelector('.content');
+    const red = document. getElementById('1');
+    const green = document. getElementById('2');
+    const blue = document.getElementById('3');
+
+    const pink = document.getElementById('4');
+    const teal = document.getElementById('5');
+    const purple = document.getElementById('6');
+
+    const clearButton = document. getElementById('clear')
+
+    red.addEventListener('click', function(e){
+        removeBGColor();
+        content.classList.add('red');
+    });
+
+    green.addEventListener('click', function(e){
+        removeBGColor();
+        content.classList.add('green');
+    });
+
+    blue.addEventListener('click', function(e){
+        removeBGColor();
+        content.classList.add('blue');
+    });
+
+    pink.addEventListener('click', function(e){
+        removeTEXTColor();
+        content.classList.add('pink');
+    });
+
+    teal.addEventListener('click', function(e){
+        removeTEXTColor();
+        content.classList.add('teal');
+    });
+
+    purple.addEventListener('click', function(e){
+        removeTEXTColor();
+        content.classList.add('purple');
+    });
+
+    clearButton.addEventListener('click',function(e){
+        removeBGColor();
+        removeTEXTColor();
+    });
+
+    function removeBGColor(){
+        content.classList.remove('red');
+        content.classList.remove('green');
+        content.classList.remove('blue');
+    }
+
+    function removeTEXTColor(){
+        content.classList.remove('pink');
+        content.classList.remove('teal');
+        content.classList.remove('purple');
+    }
+</script>
 </body>
 </html>
