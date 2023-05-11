@@ -2,9 +2,45 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Updated Color Picker</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<div class="container">
+    <div class="content">
+        <p>Choose Your Character
+        </p>
+        <div class="row">
+            <h3>Background</h3>
+            <input type="color" id="picture"mon>
+        </div>
+        <div class="row">
+            <h3>Text</h3>
+            <input type="color" id="txt">
+        </div>
+        <button id="clear">CLEAR</button>
+    </div>
+</div>
+<script>
+    // const picture = document.querySelector('img');
+    const picture = document.getElementById('id');
+    picture.src='https://www.google.com/imgres?imgurl=https%3A%2F%2Fi.insider.com%2F5bdc8613da27f86da658a7f5%3Fwidth%3D1000%26format%3Djpeg%26auto%3Dwebp&tbnid=Hn7gEZSWnSL22M&vet=12ahUKEwjXt5ro3O3-AhW3NEQIHetyD3gQMyg0egUIARCSAQ..i&imgrefurl=https%3A%2F%2Fwww.businessinsider.com%2Fevery-super-smash-bros-character-2018-11&docid=OMYeqHTof6YsIM&w=1000&h=925&q=smash%20bro%20characters&hl=en-US&safe=active&ved=2ahUKEwjXt5ro3O3-AhW3NEQIHetyD3gQMyg0egUIARCSAQ'
 
+    bg.addEventListener('change', function(e){
+        content.style.backgroundColor = e.target.value;
+    });
+
+    txt.addEventListener('change', function(e){
+        content.style.color=e.target.value;
+    });
+
+    clear.addEventListener('click', function(e){
+        content.style.backgroundColor= 'white';
+        bg.value='#FFFFFF';
+        content.style.color = ' black';
+        txt.value = '#000000';
+    });
+
+</script>
 </body>
 </html>
