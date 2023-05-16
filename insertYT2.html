@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="style.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div class="container">
+    <div class="content">
+        <h3>Enter your name</h3>
+        <div class="row">
+            <div>
+                <label for="first-name">First Name</label>
+                <input type="text" id="first-name" name="first-name" style="width: 100px;">
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">Add item</div>
+<button id="name-button">Add item</button>
+<button id="clear">Clear</button>
+<script>
+    const firstNameInput = document.getElementById('first-name');
+    const lastNameInput = document.getElementById('last-name');
+    const button = document.getElementById('name-button');
+    content = document.querySelector(`.content`);
+
+    button.addEventListener('click', handleName);
+
+    function handleName(event) {
+
+        event.preventDefault();
+
+        const firstName = firstNameInput.value;
+
+
+        const message = document.createElement('p');
+
+        message.innerText = ` ${firstName}!`;
+
+        content.appendChild(message);
+
+        firstNameInput.value = '';
+        lastNameInput.value = '';
+    }
+
+</script>
+</body>
+</html>
